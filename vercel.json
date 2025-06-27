@@ -1,12 +1,18 @@
 {
   "version": 2,
   "functions": {
-    "api/gpt.js": {
-      "runtime": "edge"
+    "api.js": {
+      "runtime": "nodejs18.x"
     }
   },
   "routes": [
-    { "src": "/api/gpt", "dest": "/api/gpt.js" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    {
+      "src": "/api",
+      "dest": "/api.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
